@@ -22,6 +22,8 @@ require 'erb'
 
 require 'oauth'
 require 'twitter'
+require 'yaml'
+
 
 # Some helper constants for path-centric logic
 APP_ROOT = Pathname.new(File.expand_path('../../', __FILE__))
@@ -44,6 +46,4 @@ end
 Twitter.configure do |config|
   config.consumer_key = ENV['TWITTER_KEY']
   config.consumer_secret = ENV['TWITTER_SECRET']
-  config.oauth_token = ENV['OAUTH_TOKEN']
-  config.oauth_token_secret = ENV['OAUTH_TOKEN_SECRET']
 end
